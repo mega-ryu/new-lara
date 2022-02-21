@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-	return view('welcome');
+	return view('home');
+});
+
+Route::get('/about', function () {
+	return view('about', [
+		'nama' 	=> "Sahrul Mahani",
+		'nim'		=> "21515028",
+		'image'	=> "https://www.kindpng.com/picc/m/24-248729_stockvader-predicted-adig-user-profile-image-png-transparent.png"
+	]);
+});
+
+Route::get('/blog', function () {
+	return view('post');
 });
