@@ -1,17 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MSM Blog | About</title>
-</head>
-<body>
+@extends('layout/main')
+
+@section('container')
 	<h1>Halaman About</h1>
 
-	<ul>
-		<li>nama : <?= $nama ?></li>
-		<li>nama : <?= $nim ?></li>
+	<ul class="list-group">
+		<li class="list-group-item">nama : {{ $nama }}</li>
+		<li class="list-group-item">nama : {{ $nim }}</li>
 	</ul>
-	<img src="<?= $image ?>" width="200" alt="profil">
-</body>
-</html>
+	<img src="{{ $image }}" width="200" alt="{{ $nama }}" class="rounded-circle">
+@endsection
