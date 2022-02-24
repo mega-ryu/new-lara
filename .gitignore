@@ -14,8 +14,6 @@ yarn-error.log
 /.idea
 /.vscode
 
-.coba
-
 # Created by https://www.toptal.com/developers/gitignore/api/laravel,windows,visualstudiocode
 # Edit at https://www.toptal.com/developers/gitignore?templates=laravel,windows,visualstudiocode
 
