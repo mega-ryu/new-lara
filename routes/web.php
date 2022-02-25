@@ -19,13 +19,15 @@ use App\Models\Category;
 
 Route::get('/', function () {
 	return view('home', [
-		'title'	=> "home"
+		'title'	=> "Home",
+		'active'=> "home"
 	]);
 });
 
 Route::get('/about', function () {
 	return view('about', [
 		'title'	=> "about",
+		'active'=> "about",
 		'nama' 	=> "Sahrul Mahani",
 		'nim'		=> "21515028",
 		'image'	=> "https://www.kindpng.com/picc/m/24-248729_stockvader-predicted-adig-user-profile-image-png-transparent.png"
@@ -41,19 +43,4 @@ Route::get('/categories', function() {
 		'active'=> "categories",
 		'categories' => Category::all()
 	]);	
-});
-
-Route::get('/categories/{category:slug}', function(Category $category) {
-	return view('posts', [
-		'title'	=> "Post By Category : ".$category->name,
-		'active'=> "categories",
-		'posts'	=> $category->posts->load('category', 'author')
-	]);
-});
-
-Route::get('/authors/{author:username}', function(User $author) {
-	return view('posts', [
-		'title'	=> "Post By Author : $author->name",
-		'posts'	=> $author->post->load('category', 'author')
-	]);
 });
