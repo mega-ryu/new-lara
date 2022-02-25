@@ -1,7 +1,7 @@
 @extends('layout/main')
 
 @section('container')
-  <h1>Posts</h1>
+  <h1>{{ $title }}</h1>
   <small>test perubahan</small>
 
   @foreach ($posts as $post)
